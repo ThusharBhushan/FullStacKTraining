@@ -30,23 +30,24 @@ public class UserController extends BaseController {
 		return "test";
 	}
 
-	@GetMapping("/user/id")
-	User getUserById(@Valid @PathVariable("id") Integer id) {
-		return userService.getUser(id);
+	@GetMapping("/user/name/{name}")
+	User getUserById(@Valid @PathVariable("name") String name) {
+		return userService.getUserByName(name);
 
 	}
 
 	@GetMapping("/user/id/{id}")
-	@ResponseStatus
+	@ResponseStatus(code =HttpStatus.FOUND)
 	ResponseEntity getResponseEntity(@Valid  @PathVariable("id") Integer id) {
 		userService.getUser(id);
 		MultiValueMap<String, String> headers = new LinkedMultiValueMap<>();
 		headers.add("header from server", "success");
-		ResponseEntity reponseEntity = new ResponseEntity<>(headers, HttpStatus.CREATED);
+		ResponseEntity reponseEntity = new ResponseEntity<>(headers, HttpStatus.FOUND);
 		return reponseEntity;
 	}
 
 	@PostMapping
+	@ResponseStatus(code =HttpStatus.CREATED)
 	void saveUser(@RequestBody User user) {
 		userService.save(user);
 		log.debug(user.getName());

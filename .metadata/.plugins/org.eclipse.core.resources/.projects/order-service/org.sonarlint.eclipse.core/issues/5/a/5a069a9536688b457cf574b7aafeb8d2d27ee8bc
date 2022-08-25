@@ -1,36 +1,32 @@
 
-K
-java:S3751""Make this method "public".(ñ¼éèıÿÿÿÿHœRMAJORZ
+
+java:S1488-"eImmediately return this expression instead of assigning it to the temporary variable "reponseEntity".(›œãøÿÿÿÿ8„Ä¹ø¬0HĞRMINORZ
 CODE_SMELL
-M
-java:S3751'"Make this method "public".(Ÿ·ÏÜ8ÈÅ»×¬0H–RMAJORZ
-CODE_SMELL
-x
-java:S46840"@Replace this persistent entity with a simple POJO or DTO object.(ËÛ«8ÈÅ»×¬0HŸRCRITICALZVULNERABILITY
-}	java:S112+"FDefine and throw a dedicated exception instead of using a generic one.(»éüÅøÿÿÿÿ8ä•Õ×¬0H™RMAJORZ
-CODE_SMELL
-y
-java:S4684'"@Replace this persistent entity with a simple POJO or DTO object.(Ÿ·ÏÜ8ÈÅ»×¬0H˜RCRITICALZVULNERABILITY
-†
-java:S1128"SRemove this unused import 'org.springframework.web.client.HttpStatusCodeException'.(‚Î©Ì8ä•Õ×¬0HRMINORZ
-CODE_SMELL
-E
-java:S37510"Make this method "public".(ËÛ«H›RMAJORZ
-CODE_SMELL
-p
-java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8ÈÅ»×¬0HšRMINORZ
-CODE_SMELL
-r
-java:S46846"@Replace this persistent entity with a simple POJO or DTO object.(«ëÃÓH RCRITICALZVULNERABILITY
-k
-java:S1611?"3Remove the parentheses around the "error" parameter(ı£—Ôúÿÿÿÿ8Â¥ØÖ¬0H•RMINORZ
+R
+java:S3751""Make this method "public".(Áş–¨øÿÿÿÿ8ÈÅ»×¬0H¯RMAJORZ
 CODE_SMELL
 g
-java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8ÈÅ»×¬0HRMINORZ
+java:S3740-"/Provide the parametrized type for this generic.(›œãøÿÿÿÿ8„Ä¹ø¬0HÏRMAJORZ
 CODE_SMELL
 M
-java:S37516"Make this method "public".(«ëÃÓ8ÈÅ»×¬0H”RMAJORZ
+java:S3751)"Make this method "public".(ŠËù8„Ä¹ø¬0HÑRMAJORZ
 CODE_SMELL
-o
-java:S1128"7Remove this unused import 'java.util.stream.Collector'.(ß‹ÎÓøÿÿÿÿ8ÈÅ»×¬0H—RMINORZ
+M
+java:S37518"Make this method "public".(«ëÃÓ8ÈÅ»×¬0H²RMAJORZ
+CODE_SMELL
+q
+java:S46842"@Replace this persistent entity with a simple POJO or DTO object.(ËÛ«H­RCRITICALZVULNERABILITY
+K
+java:S3751"Make this method "public".(ñ¼éèıÿÿÿÿHµRMAJORZ
+CODE_SMELL
+f
+java:S6212-"/Declare this local variable with "var" instead.(›œãøÿÿÿÿ8„Ä¹ø¬0HÒRINFOZ
+CODE_SMELL
+y
+java:S46848"@Replace this persistent entity with a simple POJO or DTO object.(«ëÃÓ8„Ä¹ø¬0HÓRCRITICALZVULNERABILITY
+b
+java:S3740)"/Provide the parametrized type for this generic.(ŠËù8„Ä¹ø¬0HÎRMAJORZ
+CODE_SMELL
+E
+java:S37512"Make this method "public".(ËÛ«H·RMAJORZ
 CODE_SMELL

@@ -13,14 +13,19 @@ import com.hnt.entity.User;
 public class UserService {
 	@Autowired
 	UserRepository repository;
-	public void save(User user) {
-		repository.save(user);
+	public User save(User user) {
+		return repository.save(user);
 	}
 	
 	public User getUser(Integer userId)  {
 		return repository.findById(userId).get();
-   
 		
 	}
+	
+	public User getUserByName(String name)  {
+		return repository.findByName(name);
+		
+	}
+	
 
 }
