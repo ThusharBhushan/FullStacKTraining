@@ -1,32 +1,32 @@
 
-
-java:S1488-"eImmediately return this expression instead of assigning it to the temporary variable "reponseEntity".(›œãøÿÿÿÿ8„Ä¹ø¬0HĞRMINORZ
-CODE_SMELL
 R
-java:S3751""Make this method "public".(Áş–¨øÿÿÿÿ8ÈÅ»×¬0H¯RMAJORZ
+java:S3751""Make this method "public".(æ”äëıÿÿÿÿ8ÈÅ»×¬0H÷RMAJORZ
+CODE_SMELL
+
+java:S1488-"eImmediately return this expression instead of assigning it to the temporary variable "reponseEntity".(“èûÏÿÿÿÿÿ8„Ä¹ø¬0HıRMINORZ
+CODE_SMELL
+b
+java:S3740)"/Provide the parametrized type for this generic.(ŠËù8„Ä¹ø¬0HöRMAJORZ
+CODE_SMELL
+r
+java:S46849"@Replace this persistent entity with a simple POJO or DTO object.(«ëÃÓHşRCRITICALZVULNERABILITY
+x
+java:S46843"@Replace this persistent entity with a simple POJO or DTO object.(ËÛ«8„Ä¹ø¬0HúRCRITICALZVULNERABILITY
+K
+java:S3751"Make this method "public".(ñ¼éèıÿÿÿÿHüRMAJORZ
 CODE_SMELL
 g
-java:S3740-"/Provide the parametrized type for this generic.(›œãøÿÿÿÿ8„Ä¹ø¬0HÏRMAJORZ
-CODE_SMELL
-M
-java:S3751)"Make this method "public".(ŠËù8„Ä¹ø¬0HÑRMAJORZ
-CODE_SMELL
-M
-java:S37518"Make this method "public".(«ëÃÓ8ÈÅ»×¬0H²RMAJORZ
-CODE_SMELL
-q
-java:S46842"@Replace this persistent entity with a simple POJO or DTO object.(ËÛ«H­RCRITICALZVULNERABILITY
-K
-java:S3751"Make this method "public".(ñ¼éèıÿÿÿÿHµRMAJORZ
+java:S3740-"/Provide the parametrized type for this generic.(“èûÏÿÿÿÿÿ8„Ä¹ø¬0H€RMAJORZ
 CODE_SMELL
 f
-java:S6212-"/Declare this local variable with "var" instead.(›œãøÿÿÿÿ8„Ä¹ø¬0HÒRINFOZ
-CODE_SMELL
-y
-java:S46848"@Replace this persistent entity with a simple POJO or DTO object.(«ëÃÓ8„Ä¹ø¬0HÓRCRITICALZVULNERABILITY
-b
-java:S3740)"/Provide the parametrized type for this generic.(ŠËù8„Ä¹ø¬0HÎRMAJORZ
+java:S6212-"/Declare this local variable with "var" instead.(“èûÏÿÿÿÿÿ8„Ä¹ø¬0HûRINFOZ
 CODE_SMELL
 E
-java:S37512"Make this method "public".(ËÛ«H·RMAJORZ
+java:S37513"Make this method "public".(ËÛ«HÿRMAJORZ
+CODE_SMELL
+M
+java:S37519"Make this method "public".(«ëÃÓ8ÈÅ»×¬0HøRMAJORZ
+CODE_SMELL
+M
+java:S3751)"Make this method "public".(ŠËù8„Ä¹ø¬0HùRMAJORZ
 CODE_SMELL
