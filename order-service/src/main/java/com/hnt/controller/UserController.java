@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +21,7 @@ import com.hnt.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
+@CrossOrigin
 @RestController 
 public class UserController extends BaseController {
 	@Autowired
@@ -54,7 +56,7 @@ public class UserController extends BaseController {
 	}
 
 	@PostMapping("/user")
-	Integer saveUserMethod(@RequestBody User user) {
+	Integer saveUserMethod(@Valid @RequestBody User user) {
 		userService.save(user);
 		return user.getId();
 	}
