@@ -1,13 +1,19 @@
 package com.hnt.entity;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+
+import lombok.Data;
 
 @Entity
+@Data
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,6 +22,8 @@ public class User {
 	private String name;
 	@Min(value = 1,message = "Age must be greater than 1")
 	private int age;
+	
+	private Date dob;
 	public String getName() {
 		return name;
 	}
@@ -34,4 +42,6 @@ public class User {
 	public void setId(Integer id) {
 		this.id = id;
 	}
+	
+	
 }

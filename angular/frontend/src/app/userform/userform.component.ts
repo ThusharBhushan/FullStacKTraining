@@ -10,20 +10,33 @@ import { UserService } from '../user.service';
 export class UserformComponent implements OnInit {
   user = {
     name: 'Thushar',
-    age: 10
+    age: 10,
+    dob: new Date()
   }
+  users: any[] = [];
   constructor(public userService: UserService) { }
 
+
+  deleteUser(id:number){
+    const observable = this.userService.deleteUser(id);
+    observable.subscribe((usersFromServer :any)=>{
+      this.users=usersFromServer
+      this.userService.getAllUser();
+})
+
+  }
   saveUser() {
     console.log('clicked');
+    this.user.dob = new Date(this.user.dob);
     const promise = this.userService.save(this.user);
-    promise.subscribe((response) =>
-      console.log(response)
+    promise.subscribe((responseBody: any) => {
+      console.log(responseBody);
+      this.users.push(responseBody);
+    },
+      (error: any) => {
+        console.log(error);
+      }
     );
-    (error :any)=>{
-      console.log(error);
-    }
-
   }
   ngOnInit(): void {
   }

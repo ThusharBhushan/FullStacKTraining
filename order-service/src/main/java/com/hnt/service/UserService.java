@@ -27,5 +27,13 @@ public class UserService {
 		
 	}
 	
+	public Iterable<User> getUser() {
+		return repository.findAll();
+	}
+	
+	public void delete(int userid) {
+		repository.deleteById(userid);
+	}
+	
 
 }

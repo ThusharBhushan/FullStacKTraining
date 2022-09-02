@@ -1,0 +1,10 @@
+<p></p>
+
+<ol>
+    userList works.
+    <ol >
+        <li *ngFor="let user of users">
+            {{user.name}}, {{user.age}},{{user.dob|date}}<button class='btn btn-danger' (click)='deleteUser(user.id)'>Delete</button>
+        </li>
+    </ol>
+</ol>

@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +23,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @CrossOrigin
-@RestController 
+@RestController
 public class UserController extends BaseController {
 	@Autowired
 	UserService userService;
@@ -32,32 +33,43 @@ public class UserController extends BaseController {
 		return "test";
 	}
 
+	@GetMapping("/user")
+	Iterable<User> getAllUser() {
+		return userService.getUser();
+	}
+
 	@GetMapping("/user/name/{name}")
 	User getUserById(@Valid @PathVariable("name") String name) {
 		return userService.getUserByName(name);
 
 	}
 
-	@GetMapping("/user/id/{id}")
-	@ResponseStatus(code =HttpStatus.FOUND)
-	ResponseEntity getResponseEntity(@Valid  @PathVariable("id") Integer id) {
-		userService.getUser(id);
+	@PostMapping("/user/id/{id}")
+	@ResponseStatus(code = HttpStatus.FOUND)
+	ResponseEntity getResponseEntity(@Valid @PathVariable("id") Integer id, User user) {
+		User user1 = userService.getUser(id);
 		MultiValueMap<String, String> headers = new LinkedMultiValueMap<>();
 		headers.add("header from server", "success");
-		ResponseEntity reponseEntity = new ResponseEntity<>(headers, HttpStatus.FOUND);
+		ResponseEntity reponseEntity = new ResponseEntity<>(user1, headers, HttpStatus.FOUND);
 		return reponseEntity;
 	}
 
 	@PostMapping
-	@ResponseStatus(code =HttpStatus.CREATED)
+	@ResponseStatus(code = HttpStatus.CREATED)
 	void saveUser(@RequestBody User user) {
 		userService.save(user);
 		log.debug(user.getName());
 	}
 
 	@PostMapping("/user")
-	Integer saveUserMethod(@Valid @RequestBody User user) {
+	User saveUserMethod(@Valid @RequestBody User user) {
 		userService.save(user);
-		return user.getId();
+		return user;
+	}
+
+	@DeleteMapping("user/{userid}")
+	void deleteUser(@PathVariable("userid") int userid) {
+		userService.delete(userid);
+
 	}
 }
